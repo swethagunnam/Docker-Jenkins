@@ -12,8 +12,10 @@ pipeline {
 
         stage('Setup') {
             steps {
-                sh 'source /var/lib/jenkins/myenv/bin/activate' 
-                sh "pip install -r requirements.txt"
+                sh """
+                    source /var/lib/jenkins/myenv/bin/activate
+                    pip install -r requirements.txt
+                    """
             }
         }
         stage('Test') {
