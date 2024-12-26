@@ -12,12 +12,13 @@ pipeline {
 
         stage('Setup') {
             steps {
+                sh 'source ~/myenv/bin/activate'
                 sh "pip install -r requirements.txt"
             }
         }
         stage('Test') {
             steps {
-                sh "pytest"
+                sh '~/myenv/bin/pytest'
             }
         }
 
