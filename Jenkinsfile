@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh '~/myenv/bin/pytest'
+                sh '/var/lib/jenkins/myenv/bin/pytest'
             }
         }
 
